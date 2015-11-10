@@ -12,7 +12,7 @@ encoding:
 decoding:  
 `data.match(/../g).map(function(n) { return parseInt(n, 16 })`
 
-### String vs byte array
+### Ascii string vs byte array
 to byte array:  
 `data.match(/./g).map(function(x){ return x.charCodeAt(0) })`
 
