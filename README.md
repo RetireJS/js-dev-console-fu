@@ -13,10 +13,10 @@ decoding:
 `data.match(/../g).map(function(n) { return parseInt(n, 16 })`
 
 ### Ascii string vs byte array
-to byte array:  
+Ascii string to byte array:  
 `data.match(/./g).map(function(x){ return x.charCodeAt(0) })`
 
-from byte array:  
+Byte array to ascii string:  
 `String.fromCharCode.apply(null, data)`
 
 
