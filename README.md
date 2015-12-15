@@ -12,10 +12,10 @@ encoding an array:
 decoding an array:  
 `data.match(/../g).map(function(n) { return parseInt(n, 16 })`
 
-encoding an ascii string:
+encoding an ascii string:  
 `data.match(/./g).map(function(n) { return n.charCodeAt(0).toString(16);}).join("")`
 
-decoding an ascii string:
+decoding an ascii string:  
 `data.match(/../g).map(function(n) { return String.fromCharCode(parseInt(n, 16)) }).join("")`
 
 
