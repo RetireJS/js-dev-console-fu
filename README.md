@@ -6,11 +6,18 @@ decoding:
 `atob(data)` 
 
 ### Hex-encoding
-encoding:  
+encoding an array:  
 `data.map(function(n) { return n.toString(16) }).join("")`
 
-decoding:  
+decoding an array:  
 `data.match(/../g).map(function(n) { return parseInt(n, 16 })`
+
+encoding an ascii string:
+`data.match(/./g).map(function(n) { return n.charCodeAt(0).toString(16);}).join("")`
+
+decoding an ascii string:
+`data.match(/../g).map(function(n) { return String.fromCharCode(parseInt(n, 16)) }).join("")`
+
 
 ### Ascii string vs byte array
 Ascii string to byte array:  
