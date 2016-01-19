@@ -1,4 +1,4 @@
-//These functions all characters are ascii / Latin-1
+//These functions all characters are ascii / Latin-1 (single byte characters 0-255)
 
 Number.prototype.toHex = function() { return ("0" + this.toString(16)).substr(-2) }
 Number.prototype.toChar = function() { return String.fromCharCode(this) }
