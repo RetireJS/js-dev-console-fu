@@ -1,3 +1,5 @@
+//These functions all characters are ascii / Latin-1
+
 Number.prototype.toHex = function() { return ("0" + this.toString(16)).substr(-2) }
 
 String.prototype.base64Decode = function() { return atob(this) }
