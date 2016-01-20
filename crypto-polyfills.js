@@ -16,4 +16,4 @@ Array.prototype.asString = function() { return String.fromCharCode.apply(null, t
 Array.prototype.hexEncode = function() { return this.map(function(x) { return x.toHex() }).join("") }
 Array.prototype.xor = function(ar) { var me = this; return (me.length > ar.length ? me : ar).map(function(x,i) { return me[i] ^ ar[i] }) }
 
-
+Array.randomBytes = function(length) { return Array.prototype.slice.call(crypto.getRandomValues(new Uint8Array(length))) }
