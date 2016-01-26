@@ -1,8 +1,13 @@
 ### Base64
+Browser:
 
     String.prototype.base64Decode = function() { return atob(this) }
     String.prototype.base64Encode = function() { return btoa(this) }
 
+Node.js
+
+    Array.prototype.base64Encode = function() { return new Buffer(this.slice()).toString('base64'); }
+    String.prototype.base64Decode = function() { return Array.prototype.slice.apply(new Buffer(this.toString(), 'base64')); }
 
 ### Hex encoding 
 
