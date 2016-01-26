@@ -9,7 +9,7 @@ String.prototype.hexDecode = function() { return this.match(/../g).map(function(
 String.prototype.hexEncode = function() { return this.toByteArray().hexEncode() }
 
 String.prototype.toByte = function() { return this.charCodeAt(0) }
-String.prototype.toByteArray = function() { return this.match(/./g).map(function(c){ return c.toByte() }) }
+String.prototype.toByteArray = function() { return this.match(/[\s\S]/g).map(function(c){ return c.toByte() }) }
 
 Array.prototype.asString = function() { return String.fromCharCode.apply(null, this) }
 Array.prototype.hexEncode = function() { return this.map(function(x) { return x.toHex() }).join("") }
