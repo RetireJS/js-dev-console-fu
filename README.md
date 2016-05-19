@@ -20,7 +20,7 @@ Node.js
 
     String.prototype.toByte = function() { return this.charCodeAt(0) }
     Number.prototype.toChar = function() { return String.fromCharCode(this) }
-    String.prototype.toByteArray = function() { return this.match(/[\s\S]/g).map(function(c){ return c.toByte() }) }
+    String.prototype.toByteArray = function() { return this.split('').map(function(c){ return c.toByte() }) }
     Array.prototype.asString = function() { return String.fromCharCode.apply(null, this) }
 
 ### Xor and random bytes
